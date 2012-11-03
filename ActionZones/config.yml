@@ -1,0 +1,8 @@
+sql-connection:
+  username: default
+  port: 3306
+  password: default
+  host: localhost
+  database: minecraft
+swapzones:
+  sql-threads: 25

@@ -1,0 +1,235 @@
+name: ActionZones
+main: regalowl.actionzones.ActionZones
+version: 0.13
+author: RegalOwl
+softdepend: [Vault]
+commands:
+   setzone:
+      description: Sets up zones.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [sz]
+   setlocation:
+      description: Sets a location.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [slo]
+   linklocation:
+      description: Links a location to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [lloc]
+   linkaction:
+      description: Links an action to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [lact]
+   linkmoney:
+      description: Links a monetary amount to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [lmon]
+   linkexitaction:
+      description: Links an exit action to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [leact]
+   actionzones:
+      description: Enables or disabled zone checking.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [az]
+   setzonemessage:
+      description: Sets a zone's message.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [szm]
+   setactiondelay:
+      description: Sets an action zone's delay.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [sad]
+   setexitactiondelay:
+      description: Sets an action zone's exit delay.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [sead]
+   deletezone:
+      description: Deletes a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [dz]
+   deletelocation:
+      description: Deletes a location.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [dl]
+   actionlist:
+      description: Lists various information.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [al]
+   goto:
+      description: Goes to a location.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [gt]
+   linkduration:
+      description: Links a duration to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [ldur]
+   linkzone:
+      description: Links a zone to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [lzon]
+   linkcondition:
+      description: Links a condition to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [lcon]
+   linkblockid:
+      description: Links a block id to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [lbid]
+   linkdamagevalue:
+      description: Links a damage value to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [ldv]
+   linkquantity:
+      description: Links a quantity to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [lq]
+   linkvalue:
+      description: Links a value to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [lval]
+   linkmob:
+      description: Links a mob to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [lmob]
+   linkdurability:
+      description: Links a durability to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [ldurab]
+   forcerestore:
+      description: Forces all changed blocks to be restored.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [forr]
+   togglezone:
+      description: Turns the specified zone on or off.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [tz]
+   browsezones:
+      description: Browses through all zones.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [bz]
+   browselocations:
+      description: Browses through all locations.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [bl]
+   togglezonedebug:
+      description: Toggles display of debug information for whoever sent the command.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [tzd]
+   linkpassword:
+      description: Links a password to a location.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [lpass]
+   password:
+      description: Teleports to a location if the password is correct.
+      permission: actionzones.use
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [pw]
+   linkreplaceblockid:
+      description: Links a block id to replace to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [lrbi]
+   linkreplacedamagevalue:
+      description: Links block data to replace to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [lrdv]
+   linkeffect:
+      description: Links a potion effect to a zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [leff]
+   azstats:
+      description: Displays actionzones statistics.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [azs]
+   azmonitor:
+      description: Toggles action event notifications.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [azm]
+   entrylog:
+      description: Displays who has entered the selected zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [el]
+   clearentrylog:
+      description: Clears the entry log for the specified zone.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [cel]
+   togglebypass:
+      description: Turns on and off zone actions for yourself.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [tb]
+   zstore:
+      description: Saves a zone to file.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [zs]
+   zrestore:
+      description: Restores a zone from file.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [zr]
+   zstoreremove:
+      description: Removes a zone from the SQL database.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [zsr]
+   setsqlthreads:
+      description: Sets how many threads should be used when saving to the SQL database.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [sst]
+permissions:
+    actionzones.*:
+        description: Gives access to all ActionZones commands.
+        default: op
+        children:
+            actionzones.use: true
+            actionzones.admin: true
+            actionzones.error: true
+    actionzones.use:
+        description: Allows general use of ActionZones.
+        default: true
+        children:
+            actionzones.temp: true
+    actionzones.admin:
+        description: Allows use of actionzone's management commands.
+        default: false
+    actionzones.error:
+        description: Displays error messages if they occur..
+        default: false
