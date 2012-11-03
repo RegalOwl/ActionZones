@@ -9,7 +9,6 @@ public class RemoveAllPotEffect {
 	ArrayList<PotionEffectType> pets = new ArrayList<PotionEffectType>();
 	
 	
-	@SuppressWarnings("deprecation")
 	RemoveAllPotEffect() {
 		pets.add(PotionEffectType.BLINDNESS);
 		pets.add(PotionEffectType.CONFUSION);

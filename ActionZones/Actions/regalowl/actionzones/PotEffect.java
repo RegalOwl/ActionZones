@@ -14,7 +14,6 @@ public class PotEffect {
 	HashMap<String, PotionEffectType> pets = new HashMap<String, PotionEffectType>();
 	
 	
-	@SuppressWarnings("deprecation")
 	PotEffect() {
 		pets.put("blindness", PotionEffectType.BLINDNESS);
 		pets.put("confusion", PotionEffectType.CONFUSION);

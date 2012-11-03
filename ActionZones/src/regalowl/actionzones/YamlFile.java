@@ -36,9 +36,7 @@ public class YamlFile {
     File swapzonesFile;
     File entrancelistFile;
     File playersFile;
-    
 
-    private ActionZones az;
     
 	/**
 	 * 
@@ -46,8 +44,6 @@ public class YamlFile {
 	 * 
 	 */
 	public void YamlEnable(ActionZones atz) {
-		az = atz;
-
         configFile = new File(Bukkit.getServer().getPluginManager().getPlugin("ActionZones").getDataFolder(), "config.yml");  
         zonesFile = new File(Bukkit.getServer().getPluginManager().getPlugin("ActionZones").getDataFolder(), "zones.yml");   
         locationsFile = new File(Bukkit.getServer().getPluginManager().getPlugin("ActionZones").getDataFolder(), "locations.yml");
