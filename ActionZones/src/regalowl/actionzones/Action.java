@@ -69,6 +69,7 @@ public class Action {
 		actions.put("potioneffect", 34);
 		actions.put("removepotioneffect", 35);
 		actions.put("removepotioneffects", 36);
+		actions.put("bounce", 37);
 		
 		tele = new Teleport();
 		ptele = new PayTeleport();
@@ -293,7 +294,10 @@ public class Action {
 	        	RemoveAllPotEffect rae = new RemoveAllPotEffect();
 	        	rae.removeEffects(az, p, zone);
 	        	break;	
-	        	
+	        case 37:
+	        	Bounce bce = new Bounce();
+	        	bce.startBounce(az, zone, p);
+	        	break;
 	        default: 
 				Bukkit.broadcast("§cInvalid action error!", "actionzones.admin");
 	            break;
