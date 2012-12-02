@@ -14,6 +14,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -27,7 +28,7 @@ public class ActionZones extends JavaPlugin{
 	private Zone z;
 	private Action a;
 	private YamlFile y;
-	
+	private int savetaskid;
 	
 
 	private Account acc;
@@ -56,7 +57,8 @@ public class ActionZones extends JavaPlugin{
     	
     	//Stores the new YamlFile as y.
     	YamlFile yam = new YamlFile();	
-    	yam.YamlEnable(this);    	
+    	yam.YamlEnable(this);  
+    	startSave();
     	y = yam;
 
         //VAULT**********************************************************************
@@ -187,7 +189,7 @@ public class ActionZones extends JavaPlugin{
     
     @Override
     public void onDisable() {
-
+    	HandlerList.unregisterAll(this);
     	//Saves files.
         y.saveYamls();
         Logger log = Logger.getLogger("Minecraft");
@@ -197,6 +199,19 @@ public class ActionZones extends JavaPlugin{
 	
     
     
+	public void startSave() {
+		savetaskid = this.getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
+			public void run() {
+				y.saveYamls();
+			}
+		}, 1400L, 1400L);
+	}
+    
+	
+	
+	public void stopSave() {
+		this.getServer().getScheduler().cancelTask(savetaskid);
+	}
     
     
     
