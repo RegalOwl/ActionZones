@@ -1,6 +1,6 @@
 name: ActionZones
 main: regalowl.actionzones.ActionZones
-version: 0.13
+version: 0.14
 author: RegalOwl
 softdepend: [Vault]
 commands:
@@ -9,6 +9,11 @@ commands:
       permission: actionzones.admin
       permission-message: Unknown command. Type "help" for help.
       aliases: [sz]
+   setregion:
+      description: Sets up regions.
+      permission: actionzones.admin
+      permission-message: Unknown command. Type "help" for help.
+      aliases: [sr]
    setlocation:
       description: Sets a location.
       permission: actionzones.admin
